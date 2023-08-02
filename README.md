@@ -1,14 +1,14 @@
 # wp-starter-theme
 
-Welcome to `wp-starter-theme`! This is a WordPress theme designed to streamline your development process and serve as a solid foundation for your personal projects. The theme comes with a pre-defined project structure, a collection of useful helper functions, and initial configurations to get you up and running quickly.
+Welcome to `wp-starter-theme`! This is a WordPress starter theme designed to streamline your development process and serve as a solid foundation for your personal projects. The theme comes with a pre-defined project structure, a collection of useful helper functions, and initial configurations to get you up and running quickly.
 
 ## Features
 
-- Pre-defined project structure: The theme is structured to promote organization and modularity, making it easier for you to manage your project as it grows.
-- Helper functions: A set of handy helper functions are included to simplify common tasks and enhance development efficiency.
-- Initial project configurations: The theme comes with initial configurations to provide a smooth starting point for your WordPress project.
-- Independent usage: You can use `wp-starter-theme` independently for any WordPress project you're working on.
-- Integration with `wp-docker-setup`: If you're using the companion repository, `wp-docker-setup`, you can instantly load this theme into the themes directory. This seamless integration provides a quick way to set up a new WordPress project with this starter theme.
+- 🏗️ Pre-defined project structure: The theme is structured to promote organization and modularity, making it easier for you to manage your project as it grows.
+- 🛠️ Helper functions: A set of handy helper functions are included to simplify common tasks and enhance development efficiency.
+- 🚀 Initial project configurations: The theme comes with initial configurations to provide a smooth starting point for your WordPress project.
+- 🌟 Independent usage: You can use `wp-starter-theme` independently for any WordPress project you're working on.
+- 🐳 Integration with `wp-docker-setup`: If you're using the companion repository, `wp-docker-setup`, you can instantly load this theme into the themes directory. This seamless integration provides a quick way to set up a new WordPress project with this starter theme.
 
 ## Getting Started
 
@@ -19,7 +19,7 @@ Welcome to `wp-starter-theme`! This is a WordPress theme designed to streamline 
 ## Dependencies
 
 - This theme is built to work with WordPress, so you'll need a WordPress installation to use it.
-- For seamless integration with `wp-docker-setup`, you can check out the companion repository.
+- For an even more streamlined integration process, we recommend checking out the companion repository, [`wp-docker-setup`](https://github.com/abredikis/wp-docker-setup). This repository is specifically configured to work with the `wp-starter-theme` and [`roots/bedrock`](https://github.com/roots/bedrock).
 
 ## Contributions
 
