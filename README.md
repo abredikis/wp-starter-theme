@@ -27,7 +27,7 @@ To get started with the development or build process, follow these steps:
 ## Dependencies
 
 - This theme is built to work with WordPress, so you'll need a WordPress installation to use it.
-- For an even more streamlined integration process, we recommend checking out the companion repository, [`wp-docker-setup`](https://github.com/abredikis/wp-docker-setup). This repository is specifically configured to work with the `wp-starter-theme` and [`roots/bedrock`](https://github.com/roots/bedrock).
+- For an even more streamlined integration process, we recommend checking out the companion repository, [`wp-docker-setup`](https://github.com/abredikis/wp-docker-setup). This repository is specifically configured to work with the `wp-starter-theme`.
 
 ## Contributions
 
