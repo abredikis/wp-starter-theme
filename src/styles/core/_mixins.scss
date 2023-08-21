@@ -1,0 +1,195 @@
+@use "sass:list";
+@import "variables";
+
+@mixin breakpoint-up($width: $xl) {
+  @media screen and (min-width: calc($width - 0.01px)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($width: $xl) {
+  @media screen and (max-width: calc($width - 0.01px)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-between($min, $max) {
+  @media screen and (min-width: calc($min - 0.01px)) and (max-width: calc($max - 0.01px)) {
+    @content;
+  }
+}
+
+
+// Defines padding values for containers with breakpoints, makes it easy to have consistent spacing and easy to implement changes
+@mixin container-padding-x() {
+  padding-left: $container-padding-mobile;
+  padding-right: $container-padding-mobile;
+
+  @include breakpoint-up($xl) {
+    padding-left: $container-padding-desktop;
+    padding-right: $container-padding-desktop;
+  }
+}
+
+// Calculates max-width based on container padding variables
+@mixin container-max-width($width) {
+  max-width: calc(#{$width} + #{$container-padding-mobile} + #{$container-padding-mobile});
+
+  @include breakpoint-up($xl) {
+    max-width: calc(#{$width} + #{$container-padding-desktop} + #{$container-padding-desktop});
+  }
+}
+
+// Select only the first direct child
+@mixin first-child() {
+  & > :first-child {
+    @content;
+  }
+}
+
+// Select only the last direct child
+@mixin last-child() {
+  & > :last-child {
+    @content;
+  }
+}
+
+// Apply style to all children except first
+@mixin not-first-child() {
+  & > :not(:first-child) {
+    @content;
+  }
+}
+
+// Apply style to all children except last
+@mixin not-last-child() {
+  & > :not(:last-child) {
+    @content;
+  }
+}
+
+// Apply style to all children except specific selector (class,tag,id etc)
+@mixin not-child($selector) {
+  & > :not(#{$selector}) {
+    @content;
+  }
+}
+
+
+// Select element from end
+@mixin from-end($num) {
+  & > :nth-last-child(#{$num}) {
+    @content
+  }
+}
+
+@mixin first-last-no-margin() {
+  & > :first-child {
+    margin-top: 0 !important;
+  }
+
+  & > :last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+
+@mixin create-mq($breakpoint) {
+  @if ($breakpoint == 0) {
+    @content;
+  } @else {
+    @media screen and (min-width: calc(#{$breakpoint} - 1px)) {
+      @content;
+    }
+  }
+}
+
+// For "bootstrap" grid system
+@mixin create-col-classes($modifier, $grid-cols, $breakpoint) {
+  @include create-mq($breakpoint) {
+    @for $i from 1 through $grid-cols {
+
+      $separator: if($modifier != '', '-', '');
+
+      &#{$separator}#{$modifier}-#{$i} {
+        flex: 1 1 calc(100 / ($grid-cols / $i) ) * 1%;
+        max-width: calc(100 / ($grid-cols / $i) ) * 1%;
+      }
+    }
+  }
+}
+
+// For "bootstrap" grid system
+@mixin create-auto-col-classes($modifier, $breakpoint) {
+  @include create-mq($breakpoint) {
+
+    $separator: if($modifier != '', '-', '');
+
+    &#{$separator}#{$modifier}-auto {
+      flex: 1 1 auto;
+      width: auto;
+      max-width: none;
+    }
+  }
+}
+
+@mixin display-title() {
+  font-size: 32px;
+  line-height: 1.25;
+  @include breakpoint-up($md) {
+    font-size: 48px;
+  }
+  @include breakpoint-up($xxl) {
+    font-size: 84px;
+  }
+}
+
+@mixin h1() {
+  font-size: 28px;
+  line-height: 1.25;
+  font-weight: 700;
+
+  @include breakpoint-up($xxl) {
+    font-size: 45px;
+  }
+}
+
+@mixin h2() {
+  font-size: 32px;
+  line-height: 1.25;
+  font-weight: 700;
+
+  @include breakpoint-up($xxl) {
+    font-size: 54px;
+  }
+}
+
+@mixin h3() {
+  font-size: 24px;
+  line-height: 1.25;
+  font-weight: 700;
+
+  @include breakpoint-up($xxl) {
+    font-size: 35px;
+  }
+}
+
+@mixin h4() {
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+
+  @include breakpoint-up($xl) {
+    font-size: 24px;
+  }
+}
+
+@mixin h5() {
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+
+  @include breakpoint-up($md) {
+    font-size: 20px;
+  }
+}
