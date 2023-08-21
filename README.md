@@ -16,6 +16,14 @@ Welcome to `wp-starter-theme`! This is a WordPress starter theme designed to str
 2. **Activate the Theme**: Once installed, activate the `wp-starter-theme` in your WordPress admin area.
 3. **Theme Customization**: Feel free to customize the theme to match your project's requirements. You can make changes to the code, styles, and templates to suit your needs.
 
+## How to Use
+
+To get started with the development or build process, follow these steps:
+
+1. Run `npm install` to install the necessary dependencies.
+2. Run `npm run start` to build development assets.
+3. Run `npm run build` to build production assets.
+
 ## Dependencies
 
 - This theme is built to work with WordPress, so you'll need a WordPress installation to use it.
