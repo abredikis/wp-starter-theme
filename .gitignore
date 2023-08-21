@@ -1,0 +1,31 @@
+# Ignore Node.js-related files and directories
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Ignore Webpack build artifacts
+/dist/
+/build/
+
+# Ignore development server files
+.dev-server/
+
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
+
+# Ignore common text editor files
+*.swp
+*.swo
+*.swn
+*.swm
+*.sublime-workspace
+
+# Ignore Sass/SCSS cache files
+*.sass-cache/
+
+# Ignore log files
+*.log
+
+# Ignore JetBrains IDE project files
+.idea/
