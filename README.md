@@ -8,8 +8,7 @@ Welcome to `wp-starter-theme`! This is a WordPress starter theme designed to str
 - 🛠️ Helper functions: A set of handy helper functions are included to simplify common tasks and enhance development efficiency.
 - 🚀 Initial project configurations: The theme comes with initial configurations to provide a smooth starting point for your WordPress project.
 - 🌟 Independent usage: You can use `wp-starter-theme` independently for any WordPress project you're working on.
-- 🐳 Integration with `wp-docker-setup`: If you're using the companion repository, `wp-docker-setup`, you can instantly load this theme into the themes directory. This seamless integration provides a quick way to set up a new WordPress project with this starter theme.
-
+  
 ## Getting Started
 
 1. **Installation**: You can install this theme by cloning the repository to your WordPress themes directory or by downloading the zip file and uploading it through the WordPress admin interface.
@@ -21,13 +20,8 @@ Welcome to `wp-starter-theme`! This is a WordPress starter theme designed to str
 To get started with the development or build process, follow these steps:
 
 1. Run `npm install` to install the necessary dependencies.
-2. Run `npm run start` to build development assets.
+2. Run `npm run watch` to build development assets.
 3. Run `npm run build` to build production assets.
-
-## Dependencies
-
-- This theme is built to work with WordPress, so you'll need a WordPress installation to use it.
-- For an even more streamlined integration process, we recommend checking out the companion repository, [`wp-docker-setup`](https://github.com/abredikis/wp-docker-setup). This repository is specifically configured to work with the `wp-starter-theme`.
 
 ## Contributions
 
