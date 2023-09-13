@@ -1,3 +1,21 @@
-@import "core/_common";
+@import "core/mixins";
 @import "layout/_header";
 @import "layout/_footer";
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+
+  &:after, &:before {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+  }
+}
+
+body{
+  &.modal-open{
+    overflow: hidden;
+  }
+}
